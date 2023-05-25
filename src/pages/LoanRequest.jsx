@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import ErrorComponent from "../components/ErrorComponent";
+import LoadingComponent from "../components/LoadingComponent";
+import SuccessComponent from "../components/SuccessComponent";
+import FormComponent from "../components/FormComponent";
 
 const LoanRequest = () => {
   const [userData, setUserData] = useState(null);
@@ -106,157 +110,25 @@ const LoanRequest = () => {
   };
 
   if (error) {
-    return (
-      <div className="App">
-        <div className="error404">
-          <h2>Error: {error}</h2>
-          <Link className="link" to="/">
-            Go Home
-          </Link>
-        </div>
-      </div>
-    );
+    return <ErrorComponent error={error} />;
   }
 
   if (!userData) {
-    return (
-      <div className="App">
-        <div className="modal"> Cargando...</div>
-      </div>
-    );
+    return <LoadingComponent />;
   }
 
   if (success) {
-    return (
-      <div className="App">
-        <div className="modal">
-          <h2>¡Gracias!</h2>
-          <p>Resumen de los datos enviados:</p>
-          <p>Nombre: {userData.name}</p>
-          <p>Apellidos: {userData.surname}</p>
-          <p>Email: {userData.email}</p>
-          <p>Teléfono: {formData.phone || userData.phone}</p>
-          <p>Edad: {formData.age || userData.age}</p>
-          <p>Importe Préstamo: {formData.loan_amount}</p>
-          <p>Fecha Préstamo: {formData.loan_date}</p>
-          <p>Tiempo a devolver: {formData.loan_weeks} semana(s)</p>
-          <p>Nos pondremos en contacto contigo pronto.</p>
-
-          <Link className="link" to="/">
-            Go Home
-          </Link>
-        </div>
-      </div>
-    );
+    return <SuccessComponent userData={userData} formData={formData} />;
   }
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit} className="form">
-        <h2>Solicitud de Préstamo</h2>
-
-        <div className="form-data">
-          <input
-            className="form-data-input"
-            type="text"
-            name="name"
-            placeholder="Nombre"
-            value={`Nombre: ${userData.name}`}
-            readOnly
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="text"
-            name="surname"
-            placeholder="Apellidos"
-            value={`Apellidos: ${userData.surname}`}
-            readOnly
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="text"
-            name="email"
-            placeholder="Email"
-            value={`Email: ${userData.email}`}
-            readOnly
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="text"
-            name="phone"
-            placeholder="Teléfono"
-            value={formData.phone || userData.phone}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="number"
-            name="age"
-            placeholder="Edad"
-            value={formData.age || userData.age}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="number"
-            name="loan_amount"
-            placeholder="Importe Préstamo"
-            min="10"
-            max="1000"
-            value={formData.loan_amount}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            className="form-data-input"
-            type="date"
-            name="loan_date"
-            placeholder="Fecha Préstamo"
-            value={formData.loan_date}
-            onChange={handleChange}
-            min={getCurrentDate()}
-            required
-          />
-
-          <select
-            className="form-data-input"
-            name="loan_weeks"
-            value={formData.loan_weeks}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Seleccionar plazo de devolución</option>
-            {Array.from({ length: 20 }, (_, index) => index + 1).map((week) => (
-              <option key={week} value={week}>
-                {week} semana(s)
-              </option>
-            ))}
-          </select>
-          <label className="form-data-input">
-            <input
-              type="checkbox"
-              name="check"
-              checked={formData.check}
-              onChange={handleChange}
-              required
-            />
-            Aceptar términos y condiciones
-          </label>
-          <button type="submit">Enviar solicitud</button>
-        </div>
-      </form>
-    </div>
+    <FormComponent
+      userData={userData}
+      formData={formData}
+      handleChange={handleChange}
+      getCurrentDate={getCurrentDate}
+      handleSubmit={handleSubmit}
+    />
   );
 };
 
