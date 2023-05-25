@@ -8,7 +8,30 @@
   flex-direction: column;
   color: aliceblue;
 }
-
+.home {
+  width: 80%;
+  min-height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.error404 {
+  width: 80%;
+  min-height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .form {
   width: 80%;
   min-height: 50vh;
