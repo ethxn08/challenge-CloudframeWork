@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { getCurrentDate } from "../utils/utils";
 const useForm = (userData, locationUser) => {
   const [formData, setFormData] = useState({
     phone: "",
@@ -20,22 +20,6 @@ const useForm = (userData, locationUser) => {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
-  function getCurrentDate() {
-    const today = new Date();
-    let day = today.getDate();
-    let month = today.getMonth() + 1;
-    const year = today.getFullYear();
-
-    if (day < 10) {
-      day = `0${day}`;
-    }
-    if (month < 10) {
-      month = `0${month}`;
-    }
-
-    return `${year}-${month}-${day}`;
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

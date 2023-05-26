@@ -48,3 +48,21 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+input,
+select {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  border-color: #646cff;
+}
+select:hover,
+input:hover {
+  border-color: #646cff;
+}
+select:focus,
+select:focus-visible input:focus,
+input:focus-visible {
+  outline: none;
+  border: 1px solid transparent;
+  border-color: #646cff;
+}
