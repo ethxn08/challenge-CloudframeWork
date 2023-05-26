@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useUserData = (locationUser, navigate) => {
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     surname: "",
     email: "",
@@ -13,14 +13,19 @@ const useUserData = (locationUser, navigate) => {
     check: false,
   });
   const [error, setError] = useState(null);
-  const fetchformData = async () => {
+
+  const updateFormData = (data) => {
+    setFormData(data);
+  };
+
+  const fetchFormData = async () => {
     try {
       const response = await fetch(
         `https://api7.cloudframework.io/recruitment/fullstack/users?id=${locationUser}`
       );
       const resp = await response.json();
       if (response.ok) {
-        setformData(resp.data);
+        updateFormData(resp.data);
       } else {
         setError("No se pudo obtener los datos del usuario");
       }
@@ -31,13 +36,13 @@ const useUserData = (locationUser, navigate) => {
 
   useEffect(() => {
     if (locationUser === "1" || locationUser === "2") {
-      fetchformData();
+      fetchFormData();
     } else {
       navigate("/404");
     }
   }, [locationUser, navigate]);
 
-  return { formData, setformData, error };
+  return { formData, updateFormData, error };
 };
 
 export default useUserData;

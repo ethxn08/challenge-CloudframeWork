@@ -12,14 +12,17 @@ const LoanRequest = () => {
   const navigate = useNavigate();
   const locationUser = location.pathname.split("/")[2];
 
-  const { formData, setformData, error } = useUserData(locationUser, navigate);
+  const { formData, updateFormData, error } = useUserData(
+    locationUser,
+    navigate
+  );
   const {
     handleChange,
     handleSubmit,
     getCurrentDate,
     error: formError,
     success,
-  } = useForm(formData, setformData, locationUser, navigate);
+  } = useForm(formData, updateFormData, locationUser);
 
   if (error || formError) {
     return <ErrorComponent error={error || formError} />;

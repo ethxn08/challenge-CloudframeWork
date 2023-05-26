@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SuccessComponent = ({ formData }) => {
   return (
-    <div className="App">
+    <div className="App" data-testid="success-component">
       <div className="modal">
         <h2>¡Gracias!</h2>
         <p>Resumen de los datos enviados:</p>

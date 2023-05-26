@@ -7,7 +7,7 @@ const FormComponent = ({
   handleSubmit,
 }) => {
   return (
-    <div className="App">
+    <div className="App" data-testid="form-component">
       <form onSubmit={handleSubmit} className="form">
         <h2>Solicitud de Préstamo</h2>
 
