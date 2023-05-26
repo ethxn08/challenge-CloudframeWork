@@ -12,31 +12,25 @@ const LoanRequest = () => {
   const navigate = useNavigate();
   const locationUser = location.pathname.split("/")[2];
 
-  const { userData, error } = useUserData(locationUser, navigate);
+  const { formData, setformData, error } = useUserData(locationUser, navigate);
   const {
-    formData,
     handleChange,
     handleSubmit,
     getCurrentDate,
     error: formError,
     success,
-  } = useForm(userData, locationUser);
+  } = useForm(formData, setformData, locationUser, navigate);
 
   if (error || formError) {
     return <ErrorComponent error={error || formError} />;
   }
 
-  if (!userData) {
-    return <LoadingComponent />;
-  }
-
   if (success) {
-    return <SuccessComponent userData={userData} formData={formData} />;
+    return <SuccessComponent formData={formData} />;
   }
 
   return (
     <FormComponent
-      userData={userData}
       formData={formData}
       handleChange={handleChange}
       getCurrentDate={getCurrentDate}

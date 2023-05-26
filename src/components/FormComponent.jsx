@@ -1,7 +1,6 @@
 import React from "react";
 
 const FormComponent = ({
-  userData,
   formData,
   handleChange,
   getCurrentDate,
@@ -19,7 +18,7 @@ const FormComponent = ({
               type="text"
               name="name"
               placeholder="Nombre"
-              value={`Nombre: ${userData.name}`}
+              value={`Nombre: ${formData.name}`}
               readOnly
               required
             />
@@ -29,7 +28,7 @@ const FormComponent = ({
               type="text"
               name="surname"
               placeholder="Apellidos"
-              value={`Apellidos: ${userData.surname}`}
+              value={`Apellidos: ${formData.surname}`}
               readOnly
               required
             />
@@ -39,7 +38,7 @@ const FormComponent = ({
               type="text"
               name="email"
               placeholder="Email"
-              value={`Email: ${userData.email}`}
+              value={`Email: ${formData.email}`}
               readOnly
               required
             />
@@ -49,7 +48,7 @@ const FormComponent = ({
               type="text"
               name="phone"
               placeholder="Teléfono"
-              value={formData.phone || userData.phone}
+              value={formData.phone}
               onChange={handleChange}
               required
             />
@@ -61,7 +60,7 @@ const FormComponent = ({
               type="number"
               name="age"
               placeholder="Edad"
-              value={formData.age || userData.age}
+              value={formData.age || formData.age}
               onChange={handleChange}
               required
             />
