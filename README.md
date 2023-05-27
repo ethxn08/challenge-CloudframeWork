@@ -48,6 +48,6 @@ En esta pantalla se autorrellena el formulario con los datos del usuario y debes
 ![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/0512616b-3261-4c44-8cea-ac574d312338)
 
 ### - Pantalla de Agradecimiento.
-![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/110e0527-4a7b-4d61-b185-a34575ccb091)
-
 En esta pantalla se muestran los campos del formulario editados y se informa de que se contactara con el cliente en breves.
+![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/8798e1f4-9cb7-4faf-82fd-d9326fd01c7e)
+
