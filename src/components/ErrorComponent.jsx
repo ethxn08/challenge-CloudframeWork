@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ErrorComponent = ({ error }) => {
   return (
-    <div className="App">
+    <div className="App" data-testid="error-component">
       <div className="error404">
         <h2>Error: {error}</h2>
         <Link className="link" to="/">

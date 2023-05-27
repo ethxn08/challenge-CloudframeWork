@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getCurrentDate } from "../utils/utils";
 
-const useForm = (formData, setformData, locationUser, navigate) => {
+const useForm = (formData, setformData, locationUser) => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 

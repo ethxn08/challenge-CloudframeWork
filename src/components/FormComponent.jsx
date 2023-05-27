@@ -7,8 +7,8 @@ const FormComponent = ({
   handleSubmit,
 }) => {
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit} className="form">
+    <div className="App" data-testid="form-component">
+      <form onSubmit={handleSubmit} className="form" data-testid="form">
         <h2>Solicitud de Préstamo</h2>
 
         <div className="form-data-parent">
@@ -19,6 +19,7 @@ const FormComponent = ({
               name="name"
               placeholder="Nombre"
               value={`Nombre: ${formData.name}`}
+              data-testid="name"
               readOnly
               required
             />
@@ -29,6 +30,7 @@ const FormComponent = ({
               name="surname"
               placeholder="Apellidos"
               value={`Apellidos: ${formData.surname}`}
+              data-testid="surname"
               readOnly
               required
             />
@@ -39,6 +41,7 @@ const FormComponent = ({
               name="email"
               placeholder="Email"
               value={`Email: ${formData.email}`}
+              data-testid="email"
               readOnly
               required
             />
@@ -49,6 +52,7 @@ const FormComponent = ({
               name="phone"
               placeholder="Teléfono"
               value={formData.phone}
+              data-testid="phone"
               onChange={handleChange}
               required
             />
@@ -60,7 +64,8 @@ const FormComponent = ({
               type="number"
               name="age"
               placeholder="Edad"
-              value={formData.age || formData.age}
+              value={formData.age}
+              data-testid="age"
               onChange={handleChange}
               required
             />
@@ -73,6 +78,7 @@ const FormComponent = ({
               min="10"
               max="1000"
               value={formData.loan_amount}
+              data-testid="loan_amount"
               onChange={handleChange}
               required
             />
@@ -83,6 +89,7 @@ const FormComponent = ({
               name="loan_date"
               placeholder="Fecha Préstamo"
               value={formData.loan_date}
+              data-testid="loan_date"
               onChange={handleChange}
               min={getCurrentDate()}
               required
@@ -92,6 +99,7 @@ const FormComponent = ({
               className="form-data-input"
               name="loan_weeks"
               value={formData.loan_weeks}
+              data-testid="loan_weeks"
               onChange={handleChange}
               required
             >
@@ -112,6 +120,7 @@ const FormComponent = ({
               type="checkbox"
               name="check"
               checked={formData.check}
+              data-testid="check"
               onChange={handleChange}
               required
             />
