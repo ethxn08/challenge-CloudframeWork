@@ -1,6 +1,4 @@
-# Prueba Técnica - Cleverpy Machine Learning
-
-![image](https://user-images.githubusercontent.com/91902123/235121705-779946af-e483-4867-8083-fcaf08ada410.png)
+# Prueba Técnica - Cloudframework
 
 ## Introducción
 
@@ -41,14 +39,15 @@ Con este comando puedes ver el coverage global de los test.
 ### He dividido el proyecto en 3 pantallas
 
 #### - Pantalla de Home.
-
 En esta pantalla puedes seleccionar un usuario
+![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/44f95670-029e-41ab-ba64-dab735adc043)
 
 #### - Pantalla de Solicitud de prestamo.
-
 Puedes acceder a esta pantalla a traves de {url}/partner_test.html?id={numero}
 En esta pantalla se autorrellena el formulario con los datos del usuario y debes completar los restantes.
+![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/0512616b-3261-4c44-8cea-ac574d312338)
 
 ### - Pantalla de Agradecimiento.
+![image](https://github.com/ethxn08/challenge-CloudframeWork/assets/91902123/110e0527-4a7b-4d61-b185-a34575ccb091)
 
 En esta pantalla se muestran los campos del formulario editados y se informa de que se contactara con el cliente en breves.
