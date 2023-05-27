@@ -1,11 +1,7 @@
 import React from "react";
+import { getCurrentDate } from "../utils/utils";
 
-const FormComponent = ({
-  formData,
-  handleChange,
-  getCurrentDate,
-  handleSubmit,
-}) => {
+const FormComponent = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="App" data-testid="form-component">
       <form onSubmit={handleSubmit} className="form" data-testid="form">

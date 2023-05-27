@@ -14,6 +14,7 @@ const useForm = (formData, setformData, locationUser) => {
   };
 
   const handleSubmit = async (e) => {
+    const sendData = JSON.stringify(formData);
     e.preventDefault();
     setError(null);
     try {
@@ -24,15 +25,10 @@ const useForm = (formData, setformData, locationUser) => {
           "Content-Type": "application/json",
           "X-WEB-KEY": "Development",
         },
-        body: JSON.stringify({
-          ...formData,
-        }),
+        body: sendData,
       });
 
-      const resp = await response.json();
-
       if (response.ok) {
-        setformData(resp.data);
         setSuccess(true);
       } else {
         const errorResponse = await response.text();
