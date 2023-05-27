@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1685177589745" clover="3.2.0">
+  <project timestamp="1685177589746" name="All files">
+    <metrics statements="70" coveredstatements="33" conditionals="24" coveredconditionals="9" methods="17" coveredmethods="9" elements="111" coveredelements="51" complexity="0" loc="70" ncloc="70" packages="4" files="9" classes="9"/>
+    <package name="components">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="ErrorComponent.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\components\ErrorComponent.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="FormComponent.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\components\FormComponent.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="107" count="80" type="stmt"/>
+        <line num="109" count="80" type="stmt"/>
+      </file>
+      <file name="SuccessComponent.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\components\SuccessComponent.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="38" coveredstatements="2" conditionals="12" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <file name="useForm.js" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\hooks\useForm.js">
+        <metrics statements="20" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+      </file>
+      <file name="useUserData.js" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\hooks\useUserData.js">
+        <metrics statements="18" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <file name="404.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\pages\404.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="Home.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\pages\Home.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="LoanRequest.jsx" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\pages\LoanRequest.jsx">
+        <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="utils.js" path="C:\Users\ethan\OneDrive\Escritorio\Project\challenge-CloudframeWork\src\utils\utils.js">
+        <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
